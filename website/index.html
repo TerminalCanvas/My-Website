@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <style>
+    .social-links a {
+      text-decoration: none;
+      color: #333; /* Default icon color */
+      transition: color 0.3s;
+    }
+    .social-links a:hover {
+      color: #c0c0c0; /* Hover color */
+    }
+  </style>
+</head>
+
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<nav class="navbar navbar-dark navbar-expand-lg bg-dark fixed-top shadow py-2">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">
+      <img src="icon.jpg" alt="Profile" class="rounded-circle shadow" width="70" height="70" align="center">
+      &nbspTerminal Canvas
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header class="fixed-fluid bg-secondary text-white text-center py-5">
+  <br><br><br><br>
+  <div class="container fade-in-down">
+    <img src="icon.jpg" alt="Profile" class="rounded-circle shadow" width="150" height="150" align="center">
+    <br><br>
+    <h1>Welcome!</h1>
+    <p class="lead">Know about me and my works!</p>
+  </div>
+</header>
+<br><br>
+
+<body>
+  <!-- Terminal Canvas Section -->
+<div>
+  <div class="container text-center py-5 fade-in-down">
+    <h1 class="display-4 text-dark">👋 <br>Hey there!</h1>
+    <p class="lead">
+      I’m a programmer, designer, and all-around tech enthusiast who goes by the alias 
+      <strong><b>"Terminal Canvas"</b></strong>—because life’s just more fun with a cool codename, right?
+    </p>
+    <p>
+      Whether it’s crafting sleek designs, building awesome tech projects, or diving deep into code, 
+      I’m always working on something exciting. Feel free to explore my work here, and if anything 
+      catches your eye (or you just want to chat tech), don’t hesitate to reach out!
+    </p>
+    <a href="#contact" class="btn btn-dark btn-lg mt-3">Contact Me</a>
+  </div>
+  
+  <br><br>
+  <!-- Random Daily Quote Section -->
+  <div class="container border-top border-secondary text-center py-5 fade-in-down">
+    <br><br>
+    <h1 class="display-5 text-dark">Daily Quote</h1>
+    <p id="dailyQuote" class="lead fst-italic mt-3">
+      "Your random daily inspiration will appear here!"
+    </p>
+    <button class="btn btn-outline-success mt-3" onclick="generateQuote()">Get Another Quote</button>
+  </div>
+  
+  <!-- Script to Generate Random Quotes -->
+  <script>
+    const quotes = [
+      "The best way to predict the future is to create it. – Peter Drucker",
+      "Do what you can, with what you have, where you are. – Theodore Roosevelt",
+      "Success is not final, failure is not fatal: It is the courage to continue that counts. – Winston Churchill",
+      "In the middle of every difficulty lies opportunity. – Albert Einstein",
+      "Your limitation—it's only your imagination.",
+      "Great things never come from comfort zones.",
+      "Dream it. Wish it. Do it.",
+      "Don't stop when you're tired. Stop when you're done.",
+      "Stay positive. Work hard. Make it happen."
+    ];
+  
+    const charAtStart = '"';  // Character to add at the beginning
+    const charAtEnd = '"';    // Character to add at the end
+  
+    // Modify the quotes to add characters at the beginning and end
+    const updatedQuotes = quotes.map(quote => charAtStart + quote + charAtEnd);
+  
+    function generateQuote() {
+      const randomIndex = Math.floor(Math.random() * updatedQuotes.length);
+      document.getElementById("dailyQuote").textContent = updatedQuotes[randomIndex];
+    }
+  
+    // Generate a random quote on page load
+    window.onload = generateQuote;
+  </script>
+  
+</div>
+<br><br>
+</body>
+
+<footer>
+  <div class="bg-light text-center py-4">
+    <h5 class="mb-4">Follow Me</h5>
+    <ul class="list-unstyled social-links d-flex justify-content-center gap-4">
+      <!-- Facebook -->
+      <li>
+        <a href="https://facebook.com/yourprofile" target="_blank">
+          <i class="fab fa-facebook fa-2x"></i>
+        </a>
+      </li>
+      <!-- Twitter -->
+      <li>
+        <a href="https://twitter.com/yourprofile" target="_blank">
+          <i class="fab fa-twitter fa-2x"></i>
+        </a>
+      </li>
+      <!-- Instagram -->
+      <li>
+        <a href="https://instagram.com/yourprofile" target="_blank">
+          <i class="fab fa-instagram fa-2x"></i>
+        </a>
+      </li>
+      <!-- LinkedIn -->
+      <li>
+        <a href="https://linkedin.com/in/yourprofile" target="_blank">
+          <i class="fab fa-linkedin fa-2x"></i>
+        </a>
+      </li>
+      <!-- GitHub -->
+      <li>
+        <a href="https://github.com/yourusername" target="_blank">
+          <i class="fab fa-github fa-2x"></i>
+        </a>
+      </li>
+    </ul>
+
+
+  </div>
+  <div class="bg-dark text-center text-white  py-3">
+  &copy; 2025 Terminal Canvas. All rights reserved.
+  </div>
+</footer>
+
+</html>
