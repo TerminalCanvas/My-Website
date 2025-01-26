@@ -1,4 +1,4 @@
-name: Deploy Jekyll with GitHub Pages dependencies preinstalled
+name: index
 
 on:
   # Runs on pushes targeting the default branch
@@ -32,7 +32,7 @@ jobs:
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
-          source: ./website/index
+          source: ./website
           destination: ./_site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
